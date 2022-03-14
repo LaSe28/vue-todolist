@@ -34,9 +34,12 @@ let app = new Vue({
         removeListItem(index){
             this.todos.splice(index, 1)
         },
-        done(){
-            this.todos.done = true 
-            console.log(this.todos.done)
-        }
+        done(index){
+            if(this.todos[index].done == false){
+                this.todos[index].done = true 
+            } else {
+                this.todos[index].done = false 
+            }
+        },
     }
 })

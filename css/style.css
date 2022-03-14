@@ -59,6 +59,11 @@ main li{
 
 .todo-item:hover{
     background-color: white;
+    cursor: pointer;
+}
+
+.todo-item .fas:hover{
+    cursor: pointer;
 }
 
 main .btn-remove{

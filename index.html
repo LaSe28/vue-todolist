@@ -22,7 +22,7 @@
         </div>
         <div class="todo-list">
             <ul>
-                <li @click="done" v-for="(todoItem, index) in todos"class="todo-item">
+                <li @click="done(index)" v-for="(todoItem, index) in todos" :class=" todoItem.done==true ? 'done' : ''" class="todo-item">
                     <div class="todo-text">{{ todoItem.text }}</div>
                     <button @click="removeListItem(index)" class="btn-remove"><i class="fas fa-times"></i></button>
                 </li>
