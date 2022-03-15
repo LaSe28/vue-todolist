@@ -22,8 +22,7 @@ let app = new Vue({
     },
     methods:{
         addListItem(){
-            if(this.newTodo.text.trim() != ''){
-                this.newTodo.text.trim()
+            if(this.newTodo.text != ''){
                 this.todos.unshift(this.newTodo)
             }
             this.newTodo = {

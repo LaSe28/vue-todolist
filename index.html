@@ -17,13 +17,13 @@
     </header>
     <main id="root">
         <div class="add-todo">
-            <input @keydown.enter="addListItem" v-model="newTodo.text" type="text" name="" id="input-todo" placeholder="Scrivi quì" size="2">
+            <input @keydown.enter="addListItem" v-model.trim="newTodo.text" type="text" name="" id="input-todo" placeholder="Scrivi quì" size="2">
             <button @click="addListItem"class="btn-add">Aggiungi</button>
         </div>
         <div class="todo-list">
             <ul>
-                <li @click="done(index)" v-for="(todoItem, index) in todos" :class=" todoItem.done==true ? 'done' : ''" class="todo-item">
-                    <div class="todo-text">{{ todoItem.text }}</div>
+                <li  v-for="(todoItem, index) in todos"  class="todo-item">
+                    <div @click="done(index)" :class=" todoItem.done==true ? 'done' : ''" class="todo-text">{{ todoItem.text }}</div>
                     <button @click="removeListItem(index)" class="btn-remove"><i class="fas fa-times"></i></button>
                 </li>
             </ul>
