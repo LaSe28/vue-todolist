@@ -51,7 +51,6 @@ main li{
 
 .todo-item{
     display: flex;
-    padding: .5rem 0.2rem;
     border-bottom: 1px solid grey;
 }
 
@@ -65,12 +64,14 @@ main li{
 }
 
 .todo-text{
+    padding: .5rem 0.2rem;
     flex-grow: 1;
 }
 
 main .btn-remove{
     background: none;
     border: none;
+    padding: .5rem;
 }
 
 .done{
